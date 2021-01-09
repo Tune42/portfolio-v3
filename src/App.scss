@@ -1,0 +1,103 @@
+/* Roboto Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$primary: #00FF8B;
+$secondary: #109CFF;
+$tertiary: #78FF00;
+
+* {
+    /* padding or border added to an element will not effect the width of it */
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: #111;
+    color: ivory;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+strong {
+  color: $primary;
+}
+
+.landing {
+  margin: 0 auto;
+  max-width: 90vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+
+  @media(max-width: 1150px) {
+    flex-direction: column;
+  }
+}
+
+.landing-image-container {
+  width: 500px;
+  position: relative;
+  right: 5rem;
+  
+  @media(max-width: 1150px) {
+    right: 0;
+  }
+}
+
+.landing-person {
+  position: absolute;
+  left: 30px;
+  transform: translateY(-7rem);
+}
+
+.landing-text-container {
+  width: 50%;
+  text-align: left;
+  align-self: flex-end;
+
+  & p {
+    font-size: xx-large;
+
+    @media(max-width: 768px) {
+      font-size: x-large;
+    }
+  }
+
+  @media(max-width: 1150px) {
+    width: 100%;
+    align-self: center;
+  }
+}
+
+.project-container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-display {
+  width: 50%;
+}
+
+.project-information {
+  width: 50%;
+}
+
+.project-spotify {
+  background-color: rgb(64, 64, 255);
+  box-shadow: 15px 15px 1px 1px#1ED760;
+}
