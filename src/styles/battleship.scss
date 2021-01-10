@@ -42,6 +42,11 @@
     flex-wrap: wrap;
     border-style: solid;
     border-color: teal;
+
+    @media(max-width: 350px) {
+        width: 250px;
+        height: 250px;
+    }
 }
 
 .bs-square {

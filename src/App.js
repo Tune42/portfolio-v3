@@ -10,7 +10,7 @@ function App() {
     <>
       <div className="nav-container">
         <div className="nav-link" onClick={() => setView(<Portfolio />)}>Portfolio</div>
-        <div className="nav-link" onClick={() => setView(<Widgets />)}>Playground</div>
+        <div className="nav-link" onClick={() => setView(<Widgets />)}>Widgets</div>
       </div>
       {view}
     </>

@@ -57,6 +57,10 @@ a {
   @media(max-width: 1150px) {
     left: 5px;
   }
+
+  @media(max-width: 350px) {
+    display: none;
+  }
 }
 
 .nav-link {
@@ -87,12 +91,25 @@ a {
 .landing-image-container {
   width: 500px;
   position: relative;
+
+  @media(max-width: 768px) {
+    width: 300px;
+    margin-bottom: 80px;
+  }
+
+  @media(max-width: 350px) {
+    display: none;
+  }
 }
 
 .landing-person {
   position: absolute;
   left: 30px;
   transform: translateY(-7rem);
+
+  @media(max-width: 768px) {
+    transform: translateY(-14rem);
+  }
 }
 
 .landing-text-container {

@@ -179,7 +179,7 @@ class Calculator extends React.Component {
                     <div className='current-input'>{this.state.currentInput}</div>
                 </div>
                 <Button type='calc-button' value={`<`} click={this.handleBackspace} />
-                <Button type='calc-button' value='(+/-)' click={this.changeNegative} />
+                <Button type='calc-button' value='+/-' click={this.changeNegative} />
                 <Button type='calc-button' value='C' click={this.handleClear} />
                 <Button type='calc-button' value={`\\`} click={this.handleOperator} />
                 <Button type='calc-button' value='7' click={this.handleNumberPress} />
