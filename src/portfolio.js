@@ -25,43 +25,43 @@ const Portfolio = () => {
             <h1 className='section-header'>Projects</h1>
             <div className="project">
                 <div className="project-display project-spotify">
-                <img src={spotify} alt="spotify" className='project-image' />
+                    <img src={spotify} alt="spotify" className='project-image' />
                 </div>
                 <div className="project-information">
-                <h2>
-                    Spotify Clone
-                </h2>
-                <p className='project-description'>
-                    A project for fun. A fully functional 'clone' of both the Spotify landing page and web player, using their SDK and API.
-                </p>
-                <div className="tags">
-                    <div className="tag">JS</div>
-                    <div className="tag">React</div>
-                    <div className="tag">APIs</div>
-                    <div className="tag">SASS</div>
-                </div>
-                <div className="project-links">
-                    <a href="https://github.com/Tune42/spotify-clone"><i className="fab fa-github project-link"></i></a>
-                    <a href="https://tune42-spotify.netlify.app/"><i className="fas fa-external-link-alt project-link"></i></a>
-                </div>
+                    <h2>
+                        Spotify Clone
+                    </h2>
+                    <p className='project-description'>
+                        A project for fun. A fully functional 'clone' of both the Spotify landing page and web player, using their SDK and API.
+                    </p>
+                    <div className="tags">
+                        <div className="tag">JS</div>
+                        <div className="tag">React</div>
+                        <div className="tag">APIs</div>
+                        <div className="tag">SASS</div>
+                    </div>
+                    <div className="project-links">
+                        <a href="https://github.com/Tune42/spotify-clone"><i className="fab fa-github project-link"></i></a>
+                        <a href="https://tune42-spotify.netlify.app/"><i className="fas fa-external-link-alt project-link"></i></a>
+                    </div>
                 </div>
             </div>
             <div className="project">
-            <div className="project-information">
-                <h2>Service Desk Reporting</h2>
-                <p className="project-description">
-                    A reporting application that fetches data from Atlassian's Jira API.
-                </p>
-                <div className="tags">
-                <div className="tag">React</div>
-                <div className="tag">CSS3</div>
-                <div className="tag">APIs</div>
-                <div className="tag">Express</div>
+                <div className="project-information">
+                    <h2>Service Desk Reporting</h2>
+                    <p className="project-description">
+                        A reporting application that fetches data from Atlassian's Jira API.
+                    </p>
+                    <div className="tags">
+                    <div className="tag">React</div>
+                    <div className="tag">CSS3</div>
+                    <div className="tag">APIs</div>
+                    <div className="tag">Express</div>
+                    </div>
                 </div>
-            </div>
-            <div className="project-display project-reporting">
-                <img src={reporting} alt="reporting" className='project-image' />
-            </div>
+                <div className="project-display project-reporting">
+                    <img src={reporting} alt="reporting" className='project-image' />
+                </div>
             </div>
             <div className="project">
                 <div className="project-display project-sdtools">
