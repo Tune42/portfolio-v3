@@ -32,7 +32,7 @@ const Portfolio = () => {
                     Spotify Clone
                 </h2>
                 <p className='project-description'>
-                    A project for fun. A fully functional 'clone' of the Spotify landing page and web player, using their SDK and API.
+                    A project for fun. A fully functional 'clone' of both the Spotify landing page and web player, using their SDK and API.
                 </p>
                 <div className="tags">
                     <div className="tag">JS</div>
@@ -50,13 +50,13 @@ const Portfolio = () => {
             <div className="project-information">
                 <h2>Service Desk Reporting</h2>
                 <p className="project-description">
-                A client side react application that fetches data from Atlassian's Jira API. Allows the user to specify the date range to be used in each JQL query.
+                    A reporting application that fetches data from Atlassian's Jira API.
                 </p>
                 <div className="tags">
                 <div className="tag">React</div>
                 <div className="tag">CSS3</div>
                 <div className="tag">APIs</div>
-                <div className="tag">IIS</div>
+                <div className="tag">Express</div>
                 </div>
             </div>
             <div className="project-display project-reporting">

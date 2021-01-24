@@ -58,6 +58,11 @@ a {
     left: 5px;
   }
 
+  @media(max-width: 768px) {
+    width: 100vw;
+    justify-content: space-around;
+  }
+
   @media(max-width: 350px) {
     display: none;
   }
@@ -84,7 +89,6 @@ a {
   @media(max-width: 1150px) {
     flex-direction: column;
     max-width: 90vw;
-    justify-content: center;
   }
 }
 
@@ -93,11 +97,12 @@ a {
   position: relative;
 
   @media(max-width: 768px) {
-    width: 250px;
+    width: 300px;
+    transform: translateY(2rem);
   }
 
-  @media(max-width: 450px) {
-    display: none;
+  @media(max-width: 350px) {
+    transform: translateY(1rem);
   }
 }
 
@@ -122,19 +127,40 @@ a {
     @media(max-width: 768px) {
       font-size: x-large;
     }
+
+    @media(max-width: 400px) {
+      font-size: large;
+    }
+
+    @media(max-width: 350px) {
+      font-size: normal;
+    }
+  }
+
+  & h1 {
+    @media(max-width: 768px) {
+      font-size: x-large;
+    }
+
+    @media(max-width: 350px) {
+      font-size: large;
+    }
   }
 
   @media(max-width: 1150px) {
     width: 100%;
-    align-self: center;
   }
 }
 
 .project-container {
-  margin-top: 100px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media(max-width: 768px) {
+    margin-top: 20px;
+  }
 }
 
 .section-header {
@@ -188,7 +214,7 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 40px;
 
   @media(max-width: 1100px) {
     flex-direction: column-reverse;
