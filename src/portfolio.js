@@ -1,11 +1,37 @@
+import React, {useEffect} from 'react';
 import { ReactComponent as Logo } from './assets/landing-image.svg';
 import { ReactComponent as About } from './assets/about.svg';
 import spotify from './assets/spotify.jpg';
 import reporting from './assets/SDReporting.jpg';
 import sdtools from './assets/sdtools.JPG';
 import resume from './assets/resume.pdf';
+import Project from './components/project';
+import {isBrowser} from 'react-device-detect';
 
 const Portfolio = () => {
+
+    useEffect(() => {
+        if(isBrowser) {
+            const projects = document.querySelectorAll('.project')
+            const contact = document.querySelector('.contact-container');
+            const button = document.querySelector('.github-plug');
+            const headers = document.querySelectorAll('.section-header');
+            const allElements = [...projects, contact, button, ...headers];
+            const triggerBottom = window.innerHeight / 10 * 9;
+            window.addEventListener('scroll', () => {
+                allElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    if(elementTop < triggerBottom) {
+                        element.classList.remove('hidden');
+                    } else {
+                        element.classList.add('hidden');
+                    }
+                });
+            })
+        }
+    }, [])
+
+
     return(
         <>
         <div className="landing">
@@ -23,65 +49,28 @@ const Portfolio = () => {
         </div>
         <div className="project-container">
             <h1 className='section-header'>Projects</h1>
-            <div className="project">
-                <div className="project-display project-spotify">
-                    <img src={spotify} alt="spotify" className='project-image' />
-                </div>
-                <div className="project-information">
-                    <h2>
-                        Spotify Clone
-                    </h2>
-                    <p className='project-description'>
-                        A project for fun. A fully functional 'clone' of both the Spotify landing page and web player, using their SDK and API.
-                    </p>
-                    <div className="tags">
-                        <div className="tag">JS</div>
-                        <div className="tag">React</div>
-                        <div className="tag">APIs</div>
-                        <div className="tag">SASS</div>
-                    </div>
-                    <div className="project-links">
-                        <a href="https://github.com/Tune42/spotify-clone"><i className="fab fa-github project-link"></i></a>
-                        <a href="https://tune42-spotify.netlify.app/"><i className="fas fa-external-link-alt project-link"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div className="project">
-                <div className="project-information">
-                    <h2>Service Desk Reporting</h2>
-                    <p className="project-description">
-                        A reporting application that fetches data from Atlassian's Jira API.
-                    </p>
-                    <div className="tags">
-                    <div className="tag">React</div>
-                    <div className="tag">CSS3</div>
-                    <div className="tag">APIs</div>
-                    <div className="tag">Express</div>
-                    </div>
-                </div>
-                <div className="project-display project-reporting">
-                    <img src={reporting} alt="reporting" className='project-image' />
-                </div>
-            </div>
-            <div className="project">
-                <div className="project-display project-sdtools">
-                <img src={sdtools} alt="sdtools" className='project-image' />
-                </div>
-                <div className="project-information">
-                <h2>
-                    SDTools
-                </h2>
-                <p className='project-description'>
-                    A flask application written in Python to house automation scripts for the company service desk.
-                </p>
-                <div className="tags">
-                    <div className="tag">Python</div>
-                    <div className="tag">Flask</div>
-                    <div className="tag">Bootstrap</div>
-                    <div className="tag">IIS</div>
-                </div>
-                </div>
-            </div>
+            <Project 
+            projectClass='project-spotify'
+            image={spotify}
+            title='Spotify Clone'
+            description="A project for fun. A fully functional 'clone' of both the Spotify landing page and web player, using their SDK and API."
+            tags={['JS', 'React', 'APIs', 'SASS']}
+            links={['https://github.com/Tune42/spotify-clone', 'https://tune42-spotify.netlify.app/']}
+            />
+            <Project
+            projectClass='project-reporting'
+            image={reporting}
+            title='Service Desk Reporting'
+            description="A reporting application that fetches data from Atlassian's Jira API.'"
+            tags={['React', 'CSS3', 'APIs', 'Express']}
+            />
+            <Project 
+            projectClass='project-sdtools'
+            image={sdtools}
+            title='SDTools'
+            description='A flask application written in Python to house automation scripts for the company service desk'
+            tags={['Python', 'Flask', 'Bootstrap', 'IIS']}
+            />
             <form action="https://github.com/Tune42">
             <button type="submit" className="github-plug"><h3>See more on github</h3></button>
             </form>
