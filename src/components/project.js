@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import {isBrowser} from 'react-device-detect';
 
 const Project = ({ projectClass, image, title, description, tags, links }) => {
     return (
-        <div className='project'>
+        <div className={isBrowser ? 'project hidden' : 'project'}>
             <div className={`project-display ${projectClass}`}>
                 <img src={image} alt="spotify" className='project-image' />
             </div>

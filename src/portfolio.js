@@ -48,7 +48,7 @@ const Portfolio = () => {
             </div>
         </div>
         <div className="project-container">
-            <h1 className='section-header'>Projects</h1>
+            <h1 className={isBrowser ? 'section-header hidden' : 'section-header'}>Projects</h1>
             <Project 
             projectClass='project-spotify'
             image={spotify}
@@ -72,9 +72,9 @@ const Portfolio = () => {
             tags={['Python', 'Flask', 'Bootstrap', 'IIS']}
             />
             <form action="https://github.com/Tune42">
-            <button type="submit" className="github-plug"><h3>See more on github</h3></button>
+            <button type="submit" className={isBrowser ? 'github-plug hidden' : 'github-plug'}><h3>See more on github</h3></button>
             </form>
-            <h1 className='section-header'>Contact</h1>
+            <h1 className={isBrowser ? 'section-header hidden' : 'section-header'}>Contact</h1>
         </div>
         <div className="contact-container">
             <div className="contact-card">
